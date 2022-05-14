@@ -30,6 +30,8 @@ def Open_Tasks(tag:str,nums:int):
         driver.refresh()
         os.system(f'echo "{round(time.time()-Start_Time,2)}s : 进程ID: {nums} 刷新了 {times} 次"')
         time.sleep(1)
+        driver.delete_all_cookies()
+        print ("cookie cleaned")
 
 if __name__ == '__main__':
     freeze_support()
